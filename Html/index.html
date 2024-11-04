@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--    Css     -->
+    <link rel="stylesheet" href="../Css/main.css">
+    <!--    Ovo je importovanje remixicona / this is manually imported remixicon    -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet" />
+    <!--    ================    Swiper CSS    ================    -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <title>Vuk Vandić Portfolio Website</title>
+</head>
+<!--alt/z-->
+<body>
+    <!--    ================    header page section    ================    -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <!--    creating nav menu list: -->
+            <div class="nav_menu" id="nav_menu">
+                <ul class="nav_menu_list">
+                    <li>
+                        <!--    #home will go to the id of home -->
+                        <a href="#hello" class="nav_link">
+                            Hello
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#services" class="nav_link">
+                            Services
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#resume" class="nav_link">
+                            Resume
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#portfolio" class="nav_link">
+                            Portfolio
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#blog" class="nav_link">
+                            Blog
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="nav_link">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="nav_close" id="nav_close">
+                    <i class="ri-close-fill"></i>
+                </div>
+
+            </div>
+            <div class="nav_toggle" id="nav_toggle">
+                <i class="ri-menu-line"></i>
+            </div>
+
+
+        </nav>
+    </header>
+    <!--    Main    -->
+    <main class="main">
+        <!--    ================    profile page section    ================    -->
+        <section class="profile" id="profile">
+            <div class="profile_container container grid">
+                <!--    Slika / picture container   
+                Selektori poput img.home__.container.grid 
+                ciljaju specifične elemente na osnovu njihovih klasa i strukture u HTML-u.-->
+                <img src="../Aseti/Slike/mojaSlika.jpg" alt="" class="profile_img">
+                <!--    zatim idu informacije pored slike o meni    -->
+                <div class="profile_info">
+                    <h1 class="profile_name">Vuk Vandic_</h1>
+                    <p class="profile_intern">Student, intern</p>
+                    <dl class="profile_list">
+                        <dt></dt>
+                        <dd></dd>
+
+                        <dt>PHONE:</dt>
+                        <dd>(+381)61 453 9818</dd>
+
+                        <dt>EMAIL:</dt>
+                        <dd>vukvandic19@gmail.com</dd>
+
+                        <dt>ADDRESS:</dt>
+                        <dd>Timocke divizije 11, Vozdovac</dd>
+                    </dl>
+
+                    <!--    social media links and icons    -->
+                    <div class="profile_socialMedia_div">
+                        <a href="https://linkedin.com/" target="_blank" class="profileSocialLink">
+                            <i class="ri-linkedin-box-fill"></i>
+                        </a>
+                        <a href="https://github.com/" target="_blank" class="profileSocialLink">
+                            <i class="ri-github-fill"></i>
+                        </a>
+                        <a href="https://facebook.com/" target="_blank" class="profileSocialLink">
+                            <i class="ri-instagram-fill"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--    ================    Hello page section    ================    -->
+        <section class="hello section container" id="hello">
+            <div class="hello_div">
+                <h2 class="hover_section_title section_title">Hi_</h2>
+            </div>
+            <p class="hello_details text-lg">
+                I am an student, intern of Faculty, web deveoper able to build a Web presence
+                from the ground up - from concept, navigation, layout and programming in
+                java, c++, c, c#, skilled and well-designed and efficient code using
+            </p>
+            <div class="btn_center">
+                <a href="../Aseti/Slike/John-Cv.pdf" class="button button_flex text-sm">
+                    <p class="download_text">DOWNLOAD CV</p>
+                    <i class="ri-download-2-fill"></i>
+                </a>
+            </div>
+        </section>
+
+        <!--    ================    Services page section    ================    -->
+        <section class="services section container" id="services">
+            <!--    section is already globally designed in main.css under globally reusable css    -->
+            <h2 class="hover_section_title section_title">Services_</h2>
+            <div class="services_container grid">
+                <!--    items from services:    -->
+                <!--    1 WEB DESIGN   -->
+                <div class="services_item">
+                    <div class="icon_box">
+                        <img src="../Aseti/Slike/web-design.png" alt="" class="services_icon">
+                        <div class="services_dot">
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+
+                    <h3 class="services_title text-lg">WEB DESIGN</h3>
+                    <p class="services_detail">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Quae nemo fugit quibusdam ab laborum sequi enim quidem reiciendis,
+                        modi eum dolorum in, dolores dolore at voluptate illum nam, quo distinctio.</p>
+                </div>
+
+                <!--    2 WEB DEVELOPMENT   -->
+                <div class="services_item">
+                    <div class="icon_box">
+                        <img src="../Aseti/Slike/laptop.png" alt="" class="services_icon">
+                        <div class="services_dot">
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+
+                    <h3 class="services_title text-lg">WEB DEVELOPMENT</h3>
+                    <p class="services_detail">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Quae nemo fugit quibusdam ab laborum sequi enim quidem reiciendis,
+                        modi eum dolorum in, dolores dolore at voluptate illum nam, quo distinctio.</p>
+                </div>
+
+                <!--    3 CREATIVE DESIGN   -->
+                <div class="services_item">
+                    <div class="icon_box">
+                        <img src="../Aseti/Slike/paint-palette.png" alt="" class="services_icon">
+                        <div class="services_dot">
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+
+                    <h3 class="services_title text-lg">CREATIVE DESIGN</h3>
+                    <p class="services_detail">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Quae nemo fugit quibusdam ab laborum sequi enim quidem reiciendis,
+                        modi eum dolorum in, dolores dolore at voluptate illum nam, quo distinctio.</p>
+                </div>
+
+                <!--    4 RESPONSIVE DESIGN   -->
+                <div class="services_item">
+                    <div class="icon_box">
+                        <img src="../Aseti/Slike/smartphone-call.png" alt="" class="services_icon">
+                        <div class="services_dot">
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+
+                    <h3 class="services_title text-lg">RESPONSIVE DESIGN</h3>
+                    <p class="services_detail">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Quae nemo fugit quibusdam ab laborum sequi enim quidem reiciendis,
+                        modi eum dolorum in, dolores dolore at voluptate illum nam, quo distinctio.</p>
+                </div>
+
+                <!--    5 BRANDING IDENTITY   -->
+                <div class="services_item">
+                    <div class="icon_box">
+                        <img src="../Aseti/Slike/verified.png" alt="" class="services_icon">
+                        <div class="services_dot">
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+
+                    <h3 class="services_title text-lg">BRANDING IDENTITY</h3>
+                    <p class="services_detail">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Quae nemo fugit quibusdam ab laborum sequi enim quidem reiciendis,
+                        modi eum dolorum in, dolores dolore at voluptate illum nam, quo distinctio.</p>
+                </div>
+
+                <!--    6 24/7 SUPPORT   -->
+                <div class="services_item">
+                    <div class="icon_box">
+                        <img src="../Aseti/Slike/operator.png" alt="" class="services_icon">
+                        <div class="services_dot">
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+
+                    <h3 class="services_title text-lg">24/7 SUPPORT</h3>
+                    <p class="services_detail">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Quae nemo fugit quibusdam ab laborum sequi enim quidem reiciendis,
+                        modi eum dolorum in, dolores dolore at voluptate illum nam, quo distinctio.</p>
+                </div>
+            </div>
+        </section>
+
+        <!--    ================    Resume page section    ================    -->
+        <section class="section container" id="resume">
+            <h2 class="section_title">Resume_</h2>
+
+            <div class="resume_container grid">
+                <!--    EDUCATION SECTION  -->
+                <div class="resume_data">
+                    <h3 class="resume_title text_sm">EDUCATION</h3>
+
+                    <div class="resume_item">
+                        <h3 class="resume_subtitle text-sm">Gimnazija Raska</h3>
+                        <p class="resume_date text-sm">2014-2018</p>
+                        <p class="resume_description text-base">Jezicki smer</p>
+                    </div>
+
+                    <div class="resume_item">
+                        <h3 class="resume_subtitle text-sm">Pomorski fakultet u kotoru</h3>
+                        <p class="resume_date text-sm">2018-2021</p>
+                        <p class="resume_description text-base">Bachelors Marine Engineering</p>
+                    </div>
+
+                    <div class="resume_item">
+                        <h3 class="resume_subtitle text-sm">VISER</h3>
+                        <p class="resume_date text-sm">2021 - present</p>
+                        <p class="resume_description text-base">Bachelor Computer Engineering</p>
+                    </div>
+                </div>
+
+                <!--    EMPLOYMENT SECTION  -->
+                <div class="resume_data">
+                    <h3 class="resume_title text_sm">EMPLOYMENT</h3>
+
+                    <div class="resume_item">
+                        <h3 class="resume_subtitle text-sm">Radno iskustvo</h3>
+                        <p class="resume_date text-sm">2.2.2024</p>
+                        <p class="resume_description text-base">Radno mesto</p>
+                    </div>
+
+                    <div class="resume_item">
+                        <h3 class="resume_subtitle text-sm">Praksa</h3>
+                        <p class="resume_date text-sm">2.2.2024</p>
+                        <p class="resume_description text-base">Radno mesto</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--    ================    Skills page section    ================    -->
+        <section class="section  container">
+            <h2 class="section_title">Skills_</h2>
+            <!-- container(div) for skills -->
+            <div class="skills_container grid">
+                <!-- content: -->
+                <!--    FRONTEND    -->
+                <div class="skills_content">
+                    <h3 class="skills_title text-sm">FRONTEND</h3>
+                    <div class="skills_list grid">
+                        <!--creating universal skills_data as a class
+                        so that it will apply to other skills not only
+                        FRONDEND
+                        this is all for frontend only!!!! -->
+                        <!-- HTML CSS JAVASCRIPT BOOTSTRAP SASS -->
+
+                        <!--HTML-->
+                        <div class="skills_data">
+                            <div class="skills_titles">
+                                <p class="skills_name text-sm">HTML</p>
+                                <span class="skill_number text-sm">100%</span>
+                            </div>
+                            <div class="skill_bar">
+                                <span class="skills_percentage" style="width: 100%;"></span>
+                            </div>
+                        </div>
+                        <!--CSS-->
+                        <div class="skills_data">
+                            <div class="skills_titles">
+                                <p class="skills_name text-sm">CSS</p>
+                                <span class="skill_number text-sm">100%</span>
+                            </div>
+                            <div class="skill_bar">
+                                <span class="skills_percentage" style="width: 100%;"></span>
+                            </div>
+                        </div>
+                        <!--JAVASCRIPT-->
+                        <div class="skills_data">
+                            <div class="skills_titles">
+                                <p class="skills_name text-sm">JAVASCRIPT</p>
+                                <span class="skill_number text-sm">80%</span>
+                            </div>
+                            <div class="skill_bar">
+                                <span class="skills_percentage" style="width: 70%;"></span>
+                            </div>
+                        </div>
+                        <!--BOOTSTRAP-->
+                        <div class="skills_data">
+                            <div class="skills_titles">
+                                <p class="skills_name text-sm">BOOTSTRAP</p>
+                                <span class="skill_number text-sm">100%</span>
+                            </div>
+                            <div class="skill_bar">
+                                <span class="skills_percentage" style="width: 100%;"></span>
+                            </div>
+                        </div>
+                        <!--SASS-->
+                        <div class="skills_data">
+                            <div class="skills_titles">
+                                <p class="skills_name text-sm">SASS</p>
+                                <span class="skill_number text-sm">100%</span>
+                            </div>
+                            <div class="skill_bar">
+                                <span class="skills_percentage" style="width: 100%;"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--    SOFTWARE DEVELOPMENT    -->
+                <div class="skills_content">
+                    <h3 class="skills_title text-sm">SOFTWARE DEVELOPMENT</h3>
+                    <div class="skills_list grid">
+                        <!--creating universal skills_data as a class
+                        so that it will apply to other skills not only
+                        this is all for frontend only!!!! -->
+                        <!-- BACKEND AND SOFTWARE DEVELOPMENT -->
+                        <!--C/C++-->
+                        <div class="skills_data">
+                            <div class="skills_titles">
+                                <p class="skills_name text-sm">C/C++</p>
+                                <span class="skill_number text-sm">65%</span>
+                            </div>
+                            <div class="skill_bar">
+                                <span class="skills_percentage" style="width: 65%;"></span>
+                            </div>
+                        </div>
+                        <!--JAVA-->
+                        <div class="skills_data">
+                            <div class="skills_titles">
+                                <p class="skills_name text-sm">JAVA</p>
+                                <span class="skill_number text-sm">90%</span>
+                            </div>
+                            <div class="skill_bar">
+                                <span class="skills_percentage" style="width: 90%;"></span>
+                            </div>
+                        </div>
+                        <!--PYTHON-->
+                        <div class="skills_data">
+                            <div class="skills_titles">
+                                <p class="skills_name text-sm">PYTHON</p>
+                                <span class="skill_number text-sm">60%</span>
+                            </div>
+                            <div class="skill_bar">
+                                <span class="skills_percentage" style="width: 60%;"></span>
+                            </div>
+                        </div>
+                        <!--C#-->
+                        <div class="skills_data">
+                            <div class="skills_titles">
+                                <p class="skills_name text-sm">C#</p>
+                                <span class="skill_number text-sm">75%</span>
+                            </div>
+                            <div class="skill_bar">
+                                <span class="skills_percentage" style="width: 75%;"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!--    ================    Projects page section    ================    -->
+        <section class="work section container" id="portfolio">
+            <h2 class="section_title">Work_</h2>
+
+            <div class="project_categories">
+                <!-- for mixitup to work we have to import data-filters -->
+                <button class="category_btn text-xs" data-filter="all">ALL</button>
+                <button class="category_btn text-xs" data-filter=".project_first">COLLEGE PROJECTS</button>
+                <button class="category_btn text-xs" data-filter=".project_second">PERSONAL PROJECTS</button>
+                <button class="category_btn text-xs" data-filter=".project_third">SMALL PROJECTS</button>
+                <button class="category_btn text-xs" data-filter=".project_fourth">PERSONAL PROJECT TWO</button>
+
+            </div>
+            <!-- this section is for the info about the project -->
+            <div class="projects_container container grid">
+                <!-- in order for mixitup to work we have to add mix:-->
+                <!-- first -->
+                <div class="project_item grid mix project_first">
+                    <img src="../Aseti/Slike/project-1.png" alt="Project 1" class="project_img">
+                    <div class="project_data">
+                        <h3 class="project_title">
+                            MOBILE AND DESKTOP APP
+                        </h3>
+                        <p class="project_description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo in consectetur quas
+                            aliquam sunt ullam adipisci dolorum sequi iusto neque dolor nostrum optio debitis, accusamus
+                            illum, necessitatibus illo aliquid obcaecati.
+                        </p>
+                        <h4 class="project_stack text-xs">
+                            USED STACK:
+                        </h4>
+                        <ul class="tags text-sm">
+                            <li>html5</li>
+                            <li>css3</li>
+                            <li>javascript</li>
+                            <li>BEM</li>
+                            <li>bower</li>
+                            <li>grunt</li>
+                        </ul>
+
+                        <a href="" class="project_link text-sm">www.superapp.com</a>
+
+
+                        
+                    </div>
+                </div>
+                <!-- second -->
+                <div class="project_item grid mix project_second">
+                    <img src="../Aseti/Slike/project-2.png" alt="Project 2" class="project_img">
+                    <div class="project_data">
+                        <h3 class="project_title">
+                            ADMIN PROJECT TEMPLATE
+                        </h3>
+                        <p class="project_description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo in consectetur quas
+                            aliquam sunt ullam adipisci dolorum sequi iusto neque dolor nostrum optio debitis, accusamus
+                            illum, necessitatibus illo aliquid obcaecati.
+                        </p>
+                        <h4 class="project_stack text-xs">
+                            USED STACK:
+                        </h4>
+                        <ul class="tags text-sm">
+                            <li>html5</li>
+                            <li>css3</li>
+                            <li>javascript</li>
+                            <li>BEM</li>
+                            <li>bower</li>
+                            <li>grunt</li>
+                        </ul>
+
+                        <a href="" class="project_link text-sm">www.superapp.com</a>
+                    </div>
+                </div>
+                <!-- third -->
+                <div class="project_item grid mix project_third">
+                    <img src="../Aseti/Slike/project-3.png" alt="Project 3" class="project_img">
+                    <div class="project_data">
+                        <h3 class="project_title">
+                            WEB APP PAGE FOR TRAVEL COMPANY
+                        </h3>
+                        <p class="project_description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo in consectetur quas
+                            aliquam sunt ullam adipisci dolorum sequi iusto neque dolor nostrum optio debitis, accusamus
+                            illum, necessitatibus illo aliquid obcaecati.
+                        </p>
+                        <h4 class="project_stack text-xs">
+                            USED STACK:
+                        </h4>
+                        <ul class="tags text-sm">
+                            <li>html5</li>
+                            <li>css3</li>
+                            <li>javascript</li>
+                            <li>BEM</li>
+                            <li>bower</li>
+                            <li>grunt</li>
+                        </ul>
+
+                        <a href="" class="project_link text-sm">www.superapp.com</a>
+                    </div>
+                </div>
+                <!-- Fourth -->
+                <div class="project_item grid mix project_fourth">
+                    <img src="../Aseti/Slike/project-3.png" alt="Project 3" class="project_img">
+                    <div class="project_data">
+                        <h3 class="project_title">
+                            Another one
+                        </h3>
+                        <p class="project_description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo in consectetur quas
+                            aliquam sunt ullam adipisci dolorum sequi iusto neque dolor nostrum optio debitis, accusamus
+                            illum, necessitatibus illo aliquid obcaecati.
+                        </p>
+                        <h4 class="project_stack text-xs">
+                            USED STACK:
+                        </h4>
+                        <ul class="tags text-sm">
+                            <li>html5</li>
+                            <li>css3</li>
+                            <li>javascript</li>
+                            <li>BEM</li>
+                            <li>bower</li>
+                            <li>grunt</li>
+                        </ul>
+
+                        <a href="" class="project_link text-sm">www.superapp.com</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="container hr">
+
+        <!--    ================    Blog page section    ================    -->
+        <section class="blog section container" id="blog">
+            <h2 class="section_title">Latest Posts_</h2>
+            <!--this is the post html section-->
+            <div class="post_container grid">
+                <!--first blog-->
+                <a href="blogDetail.html" class="post_card">
+                    <img src="../Aseti/Slike/blog-1.png" alt="blog-1.png" class="post_img">
+                    <div class="post_content">
+                        <p class="post_date text-xs">January 20, 2024.</p>
+                        <h3 class="post_title text-sm">Building my first portfolio</h3>
+                        <p class="post_description text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum sunt tempore architecto dolor</p>
+                    </div>
+                </a>
+                <!--second blog-->
+                <a href="blogDetail.html" class="post_card">
+                    <img src="../Aseti/Slike/blog-2.png" alt="blog-1.png" class="post_img">
+                    <div class="post_content">
+                        <p class="post_date text-xs">January 24, 2024.</p>
+                        <h3 class="post_title text-sm">Java project</h3>
+                        <p class="post_description text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum sunt tempore architecto dolor</p>
+                    </div>
+                </a>
+                <!--third blog-->
+                <a href="blogDetail.html" class="post_card">
+                    <img src="../Aseti/Slike/blog-3.png" alt="blog-1.png" class="post_img">
+                    <div class="post_content">
+                        <p class="post_date text-xs">January 22, 2024.</p>
+                        <h3 class="post_title text-sm">C# FPS game</h3>
+                        <p class="post_description text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum sunt tempore architecto dolor</p>
+                    </div>
+                </a>
+            </div>
+
+        </section>
+
+        <!--    ================    Contact page section    ================    -->
+        <section class="contact section" id="contact">
+            <div class="contact_content container">
+                <h2 class="section_title">Get in touch_</h2>
+                <div class="contact_container grid">
+                    <!--info about me-->
+                    <div class="contact_info">
+                        <dl class="contact_list">
+                            <div class="contact_item">
+                                <dt>Phone:</dt>
+                                <dd>(+381)61 4539818</dd>
+                            </div>
+                            <div class="contact_item">
+                                <dt>Email:</dt>
+                                <dd>vukvandic19@gmail.com</dd>
+                            </div>
+                        </dl>
+                        <ul class="contact_social">
+                            <li>
+                                <a href="https://www.github.com/" target="_blank" class="contact_social_link">Github</a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/" target="_blank" class="contact_social_link">Instagram</a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/" target="_blank" class="contact_social_link">Linkedin</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--send me an email-->
+                    <div class="contact_form">
+                        <p class="contact_form-title">Or just write me a letter here</p>
+                        <form action="" id="contact-form">
+                            <div class="contact_input-div">
+                                <input type="text" placeholder="Your name" class="contact_input" name="name" id="contact-name">
+                            </div>
+
+                            <div class="contact_input-div">
+                                <input type="email" placeholder="Your e-mail" class="contact_input" name="email" id="contact-email">
+                            </div>
+
+                            <div class="contact_input-div">
+                                <textarea placeholder="Type the message here" class="contact_input textarea" name="message" id="message" cols="30" rows="10"></textarea>
+                            </div>
+                            <button type="submit" class="button contact_button" onsubmit="sendEmail(); reset()">SEND</button>
+                        </form>
+                        <p class="footer_copy">&copy; 2024 Vuk Vandic. All Rights Reserved</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!--    ================    Mixitup    ================    -->
+    <script src="../Javascript/mixitup.min.js"></script>
+    <!--    ================    Email JS    ================    -->
+    
+    <!--    ================    Javascript    ================    -->
+    <script src="../Javascript/main.js "></script>
+    <script src="../Javascript/common.js "></script>
+</body>
+</html>

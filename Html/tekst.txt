@@ -1,0 +1,433 @@
+<!--    ================    Projects page section    ================    -->
+        <section class="work section container" id="portfolio">
+            <h2 class="section_title">Work_</h2>
+
+            <div class="project_categories">
+                <!-- for mixitup to work we have to import data-filters -->
+                <button class="category_btn text-xs active-work" data-filter="all">ALL</button>
+                <button class="category_btn text-xs" data-filter=".project_first">COLLEGE PROJECTS</button>
+                <button class="category_btn text-xs" data-filter=".project_second">PERSONAL PROJECTS</button>
+                <button class="category_btn text-xs" data-filter=".project_third">SMALL PROJECTS</button>
+                <button class="category_btn text-xs" data-filter=".project_fourth">PERSONAL PROJECT TWO</button>
+
+            </div>
+            <!-- this section is for the info about the project -->
+            <div class="projects_container grid">
+                <!-- in order for mixitup to work we have to add mix:-->
+                <!-- first -->
+                <div class="project_item grid mix project_first">
+                    <img src="../Aseti/Slike/project-1.png" alt="Project 1" class="project_img">
+                    <div class="project_data">
+                        <h3 class="project_title">
+                            MOBILE AND DESKTOP APP
+                        </h3>
+                        <p class="project_description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo in consectetur quas
+                            aliquam sunt ullam adipisci dolorum sequi iusto neque dolor nostrum optio debitis, accusamus
+                            illum, necessitatibus illo aliquid obcaecati.
+                        </p>
+                        <h4 class="project_stack text-xs">
+                            USED STACK:
+                        </h4>
+                        <ul class="tags text-sm">
+                            <li>html5</li>
+                            <li>css3</li>
+                            <li>javascript</li>
+                            <li>BEM</li>
+                            <li>bower</li>
+                            <li>grunt</li>
+                        </ul>
+
+                        <a href="" class="project_link text-sm">www.superapp.com</a>
+
+
+                        
+                    </div>
+                </div>
+                <!-- second -->
+                <div class="project_item grid mix project_second">
+                    <img src="../Aseti/Slike/project-2.png" alt="Project 2" class="project_img">
+                    <div class="project_data">
+                        <h3 class="project_title">
+                            ADMIN PROJECT TEMPLATE
+                        </h3>
+                        <p class="project_description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo in consectetur quas
+                            aliquam sunt ullam adipisci dolorum sequi iusto neque dolor nostrum optio debitis, accusamus
+                            illum, necessitatibus illo aliquid obcaecati.
+                        </p>
+                        <h4 class="project_stack text-xs">
+                            USED STACK:
+                        </h4>
+                        <ul class="tags text-sm">
+                            <li>html5</li>
+                            <li>css3</li>
+                            <li>javascript</li>
+                            <li>BEM</li>
+                            <li>bower</li>
+                            <li>grunt</li>
+                        </ul>
+
+                        <a href="" class="project_link text-sm">www.superapp.com</a>
+                    </div>
+                </div>
+                <!-- third -->
+                <div class="project_item grid mix project_third">
+                    <img src="../Aseti/Slike/project-3.png" alt="Project 3" class="project_img">
+                    <div class="project_data">
+                        <h3 class="project_title">
+                            WEB APP PAGE FOR TRAVEL COMPANY
+                        </h3>
+                        <p class="project_description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo in consectetur quas
+                            aliquam sunt ullam adipisci dolorum sequi iusto neque dolor nostrum optio debitis, accusamus
+                            illum, necessitatibus illo aliquid obcaecati.
+                        </p>
+                        <h4 class="project_stack text-xs">
+                            USED STACK:
+                        </h4>
+                        <ul class="tags text-sm">
+                            <li>html5</li>
+                            <li>css3</li>
+                            <li>javascript</li>
+                            <li>BEM</li>
+                            <li>bower</li>
+                            <li>grunt</li>
+                        </ul>
+
+                        <a href="" class="project_link text-sm">www.superapp.com</a>
+                    </div>
+                </div>
+                <!-- Fourth -->
+                <div class="project_item grid mix project_fourth">
+                    <img src="../Aseti/Slike/project-3.png" alt="Project 3" class="project_img">
+                    <div class="project_data">
+                        <h3 class="project_title">
+                            Another one
+                        </h3>
+                        <p class="project_description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo in consectetur quas
+                            aliquam sunt ullam adipisci dolorum sequi iusto neque dolor nostrum optio debitis, accusamus
+                            illum, necessitatibus illo aliquid obcaecati.
+                        </p>
+                        <h4 class="project_stack text-xs">
+                            USED STACK:
+                        </h4>
+                        <ul class="tags text-sm">
+                            <li>html5</li>
+                            <li>css3</li>
+                            <li>javascript</li>
+                            <li>BEM</li>
+                            <li>bower</li>
+                            <li>grunt</li>
+                        </ul>
+
+                        <a href="" class="project_link text-sm">www.superapp.com</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--    ================    Blog page section    ================    -->
+        <section class="blog section container" id="blog">
+            <h2 class="section_title">Latest Posts_</h2>
+            <!--this is the post html section-->
+            <div class="post_container grid">
+                <!--first blog-->
+                <a href="blogDetail.html" class="post_card">
+                    <img src="../Aseti/Slike/blog-1.png" alt="blog-1.png" class="post_img">
+                    <div class="post_content">
+                        <p class="post_date text-xs">January 20, 2024.</p>
+                        <h3 class="post_title text-sm">Building my first portfolio</h3>
+                        <p class="post_description text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum sunt tempore architecto dolor</p>
+                    </div>
+                </a>
+                <!--second blog-->
+                <a href="blogDetail.html" class="post_card">
+                    <img src="../Aseti/Slike/blog-2.png" alt="blog-1.png" class="post_img">
+                    <div class="post_content">
+                        <p class="post_date text-xs">January 24, 2024.</p>
+                        <h3 class="post_title text-sm">Java project</h3>
+                        <p class="post_description text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum sunt tempore architecto dolor</p>
+                    </div>
+                </a>
+                <!--third blog-->
+                <a href="blogDetail.html" class="post_card">
+                    <img src="../Aseti/Slike/blog-3.png" alt="blog-1.png" class="post_img">
+                    <div class="post_content">
+                        <p class="post_date text-xs">January 22, 2024.</p>
+                        <h3 class="post_title text-sm">C# FPS game</h3>
+                        <p class="post_description text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum sunt tempore architecto dolor</p>
+                    </div>
+                </a>
+            </div>
+
+        </section>
+
+        <!--    ================    Contact page section    ================    -->
+        <section class="contact section" id="contact">
+            <div class="contact_content container">
+                <h2 class="section_title">Get in touch_</h2>
+                <div class="contact_container grid">
+                    <!--info about me-->
+                    <div class="contact_info">
+                        <dl class="contact_list">
+                            <dt>Phone:</dt>
+                            <dd>(+381)61 453 9818</dd>
+
+                            <dt>Email:</dt>
+                            <dd>vukvandic19@gmail.com</dd>
+                        </dl>
+                        <ul class="contact_social">
+                            <li>
+                                <a href="https://www.github.com/" target="_blank" class="contact_social_link">Github</a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/" target="_blank" class="contact_social_link">Instagram</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--send me an email-->
+                    <div class="contact_form">
+                        <p class="contact_form-title">Or just write me a letter here</p>
+                        <form action="" id="contact-form">
+                            <div class="contact_input-div">
+                                <input type="text" placeholder="Your name" class="contact_input" name="name" id="contact-name">
+                            </div>
+
+                            <div class="contact_input-div">
+                                <input type="email" placeholder="Your e-mail" class="contact_input" name="email" id="contact-email">
+                            </div>
+
+                            <div class="contact_input-div">
+                                <textarea placeholder="Type the message here" class="contact_input textarea" name="message" id="message" cols="30" rows="10"></textarea>
+                            </div>
+
+                            <p class="contact_message text-sm" id="contact-message">
+                                Message
+                            </p>
+                            <button type="submit" class="button contact_button" onsubmit="sendEmail(); reset()">SEND</button>
+                        </form>
+                        <p class="footer_copy">&copy; 2024 Vuk Vandic. All Rights Reserved</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!--    ================    Projects page section    ================    -->
+        <section class="work section container" id="portfolio">
+            <h2 class="section_title">Work_</h2>
+
+            <div class="project_categories">
+                <!-- for mixitup to work we have to import data-filters -->
+                <button class="category_btn text-xs active-work" data-filter="all">ALL</button>
+                <button class="category_btn text-xs" data-filter=".project_first">COLLEGE PROJECTS</button>
+                <button class="category_btn text-xs" data-filter=".project_second">PERSONAL PROJECTS</button>
+                <button class="category_btn text-xs" data-filter=".project_third">SMALL PROJECTS</button>
+                <button class="category_btn text-xs" data-filter=".project_fourth">PERSONAL PROJECT TWO</button>
+
+            </div>
+            <!-- this section is for the info about the project -->
+            <div class="projects_container grid">
+                <!-- in order for mixitup to work we have to add mix:-->
+                <!-- first -->
+                <div class="project_item grid mix project_first">
+                    <img src="../Aseti/Slike/project-1.png" alt="Project 1" class="project_img">
+                    <div class="project_data">
+                        <h3 class="project_title">
+                            MOBILE AND DESKTOP APP
+                        </h3>
+                        <p class="project_description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo in consectetur quas
+                            aliquam sunt ullam adipisci dolorum sequi iusto neque dolor nostrum optio debitis, accusamus
+                            illum, necessitatibus illo aliquid obcaecati.
+                        </p>
+                        <h4 class="project_stack text-xs">
+                            USED STACK:
+                        </h4>
+                        <ul class="tags text-sm">
+                            <li>html5</li>
+                            <li>css3</li>
+                            <li>javascript</li>
+                            <li>BEM</li>
+                            <li>bower</li>
+                            <li>grunt</li>
+                        </ul>
+
+                        <a href="" class="project_link text-sm">www.superapp.com</a>
+
+
+                        
+                    </div>
+                </div>
+                <!-- second -->
+                <div class="project_item grid mix project_second">
+                    <img src="../Aseti/Slike/project-2.png" alt="Project 2" class="project_img">
+                    <div class="project_data">
+                        <h3 class="project_title">
+                            ADMIN PROJECT TEMPLATE
+                        </h3>
+                        <p class="project_description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo in consectetur quas
+                            aliquam sunt ullam adipisci dolorum sequi iusto neque dolor nostrum optio debitis, accusamus
+                            illum, necessitatibus illo aliquid obcaecati.
+                        </p>
+                        <h4 class="project_stack text-xs">
+                            USED STACK:
+                        </h4>
+                        <ul class="tags text-sm">
+                            <li>html5</li>
+                            <li>css3</li>
+                            <li>javascript</li>
+                            <li>BEM</li>
+                            <li>bower</li>
+                            <li>grunt</li>
+                        </ul>
+
+                        <a href="" class="project_link text-sm">www.superapp.com</a>
+                    </div>
+                </div>
+                <!-- third -->
+                <div class="project_item grid mix project_third">
+                    <img src="../Aseti/Slike/project-3.png" alt="Project 3" class="project_img">
+                    <div class="project_data">
+                        <h3 class="project_title">
+                            WEB APP PAGE FOR TRAVEL COMPANY
+                        </h3>
+                        <p class="project_description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo in consectetur quas
+                            aliquam sunt ullam adipisci dolorum sequi iusto neque dolor nostrum optio debitis, accusamus
+                            illum, necessitatibus illo aliquid obcaecati.
+                        </p>
+                        <h4 class="project_stack text-xs">
+                            USED STACK:
+                        </h4>
+                        <ul class="tags text-sm">
+                            <li>html5</li>
+                            <li>css3</li>
+                            <li>javascript</li>
+                            <li>BEM</li>
+                            <li>bower</li>
+                            <li>grunt</li>
+                        </ul>
+
+                        <a href="" class="project_link text-sm">www.superapp.com</a>
+                    </div>
+                </div>
+                <!-- Fourth -->
+                <div class="project_item grid mix project_fourth">
+                    <img src="../Aseti/Slike/project-3.png" alt="Project 3" class="project_img">
+                    <div class="project_data">
+                        <h3 class="project_title">
+                            Another one
+                        </h3>
+                        <p class="project_description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo in consectetur quas
+                            aliquam sunt ullam adipisci dolorum sequi iusto neque dolor nostrum optio debitis, accusamus
+                            illum, necessitatibus illo aliquid obcaecati.
+                        </p>
+                        <h4 class="project_stack text-xs">
+                            USED STACK:
+                        </h4>
+                        <ul class="tags text-sm">
+                            <li>html5</li>
+                            <li>css3</li>
+                            <li>javascript</li>
+                            <li>BEM</li>
+                            <li>bower</li>
+                            <li>grunt</li>
+                        </ul>
+
+                        <a href="" class="project_link text-sm">www.superapp.com</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--    ================    Blog page section    ================    -->
+        <section class="blog section container" id="blog">
+            <h2 class="section_title">Latest Posts_</h2>
+            <!--this is the post html section-->
+            <div class="post_container grid">
+                <!--first blog-->
+                <a href="blogDetail.html" class="post_card">
+                    <img src="../Aseti/Slike/blog-1.png" alt="blog-1.png" class="post_img">
+                    <div class="post_content">
+                        <p class="post_date text-xs">January 20, 2024.</p>
+                        <h3 class="post_title text-sm">Building my first portfolio</h3>
+                        <p class="post_description text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum sunt tempore architecto dolor</p>
+                    </div>
+                </a>
+                <!--second blog-->
+                <a href="blogDetail.html" class="post_card">
+                    <img src="../Aseti/Slike/blog-2.png" alt="blog-1.png" class="post_img">
+                    <div class="post_content">
+                        <p class="post_date text-xs">January 24, 2024.</p>
+                        <h3 class="post_title text-sm">Java project</h3>
+                        <p class="post_description text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum sunt tempore architecto dolor</p>
+                    </div>
+                </a>
+                <!--third blog-->
+                <a href="blogDetail.html" class="post_card">
+                    <img src="../Aseti/Slike/blog-3.png" alt="blog-1.png" class="post_img">
+                    <div class="post_content">
+                        <p class="post_date text-xs">January 22, 2024.</p>
+                        <h3 class="post_title text-sm">C# FPS game</h3>
+                        <p class="post_description text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum sunt tempore architecto dolor</p>
+                    </div>
+                </a>
+            </div>
+
+        </section>
+
+        <!--    ================    Contact page section    ================    -->
+        <section class="contact section" id="contact">
+            <div class="contact_content container">
+                <h2 class="section_title">Get in touch_</h2>
+                <div class="contact_container grid">
+                    <!--info about me-->
+                    <div class="contact_info">
+                        <dl class="contact_list">
+                            <dt>Phone:</dt>
+                            <dd>(+381)61 453 9818</dd>
+
+                            <dt>Email:</dt>
+                            <dd>vukvandic19@gmail.com</dd>
+                        </dl>
+                        <ul class="contact_social">
+                            <li>
+                                <a href="https://www.github.com/" target="_blank" class="contact_social_link">Github</a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/" target="_blank" class="contact_social_link">Instagram</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--send me an email-->
+                    <div class="contact_form">
+                        <p class="contact_form-title">Or just write me a letter here</p>
+                        <form action="" id="contact-form">
+                            <div class="contact_input-div">
+                                <input type="text" placeholder="Your name" class="contact_input" name="name" id="contact-name">
+                            </div>
+
+                            <div class="contact_input-div">
+                                <input type="email" placeholder="Your e-mail" class="contact_input" name="email" id="contact-email">
+                            </div>
+
+                            <div class="contact_input-div">
+                                <textarea placeholder="Type the message here" class="contact_input textarea" name="message" id="message" cols="30" rows="10"></textarea>
+                            </div>
+
+                            <p class="contact_message text-sm" id="contact-message">
+                                Message
+                            </p>
+                            <button type="submit" class="button contact_button" onsubmit="sendEmail(); reset()">SEND</button>
+                        </form>
+                        <p class="footer_copy">&copy; 2024 Vuk Vandic. All Rights Reserved</p>
+                    </div>
+                </div>
+            </div>
+        </section>

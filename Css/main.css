@@ -1,0 +1,1059 @@
+/*  ================    importovanje / importing|importovanje / importing    ================    */
+@font-face {
+    font-family: 'roboto-mono-font';
+    src: url(../Css/Fonts/RobotoMono-Bold.ttf);
+}
+@font-face {
+    font-family: 'roboto-font';
+    src: url(../Css/Fonts/Roboto-Bold.ttf);
+}
+@font-face {
+    font-family: 'roboto-semibold-font';
+    src: url(../Css/Fonts/RobotoMono-SemiBold.ttf);
+}
+/*  ================    css variables / promenjive za dalje koriscenje css-a    ================    */
+:root{
+    /*  podesavanje velicine headera / header height    */
+    --header-height: 3.5rem;
+    /*  Colors  */
+    --primary-color: #4a4a4a;
+    --primary-color-alt: #575757;  
+    --linear-gradient: linear-gradient(54deg, rgba(45,45,45,0.95) 34%, rgba(45,45,45,0.95));
+    --title-color: #4a4a4a;
+    --text-color: #555;
+    --text-alt-color: #999;
+    --bg-color: #fff;
+    --bg-color-alt: #e9ecef;
+    --border-color: #f1f1f1;
+    /*  Fonts and typography / fontovi  */
+    --roboto-font: 'roboto-font', sans-serif;
+    --roboto-mono-font: 'roboto-mono-font', sans-serif;
+    --roboto-semibold-font: 'roboto-semibold-font', sans-serif;
+    /*  velicine fonta  */
+    --size-h1: 2.75rem;
+    --size-h2: 2.25rem;
+    --size-lg: 1.125rem;
+    --size-base: 1rem;
+    --size-sm: 0.875rem;
+    --size-xs: 0.75rem;
+    /*  font weight / debljina fonta    */
+    --medium: 500;
+    --semibold: 600;
+    --bold: 700;
+}
+/*  ================    global css section, applies globally to the entire website    ================    */
+* {
+    margin:0;
+    padding: 0;
+    /*  box-sizing: border-box; kaže browser-u(chrome) da dimenzije elementa treba da uključuju padding i border 
+        to jest ako imamo element od 300px, padding i border se ukljucuju u ova 300 piksela, dodaju se unutar
+        elements are included in the element and adding inside the element, and not adding outside  */
+    box-sizing: border-box;
+}
+/*  podesavanje skrolovanja*/
+html {
+    scroll-behavior: smooth;
+}
+body,button,input,textarea{
+    font-family: var(--roboto-semibold-font);
+    font-size: var(--size-base);
+}
+body{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    /* velicina u vertikalnoj razdaljini teksta / vertical size of text */
+    line-height: 1.5em;
+}
+h1,
+h1,
+h3,
+h4 {
+    font-family: var(--roboto-font);
+    font-weight: var(--bold);
+}
+ul {
+    /*  eleminise podrazumevani vizuelni stil koji prikazije svaku listu*/
+    list-style: none;
+}
+/*  brisanje dizajna sa linka   */
+a {
+    text-decoration: none;
+}
+button {
+    cursor: pointer;
+    /* zatim brisemo pozadinsku boju, granicu i outline(kada je u fokusu)   */
+    /* deleting background color, border and outlining when focused */
+    background: none;
+    border: none;
+    outline: none;
+}
+img {
+    /*  making image responsive   */
+    max-width: 100%;
+    /*  automatically making the size responsive with width */
+    height: auto;
+}
+textarea, 
+input {
+    /*  again deleting border outline and background on input and textarea*/
+    background: none;
+    border: none;
+    outline: none;
+}
+
+/*  ================    Reusable css section, means you can apply container and grid to other    ================    */
+/*  centering and designign container, image and profile info   */
+.container{
+    /*background-color: red;*/
+    display: flex;
+    flex-direction: column;
+    max-width: 1140px;
+    margin: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+/* displaying grid */
+.grid{
+    /*  this makes the elements in profile section display in grid
+    which means that they wont be one above other, rather they will side next to the other*/
+    display: grid;
+}
+.section{
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    
+}
+.section_title{
+    font-size: var(--size-h2);
+    line-height: 1.17em;
+    font-weight: var(--medium);
+    margin-bottom: 1.15em;
+}
+.text-base{
+    font-size: var(--size-base);
+    line-height: 1.55em;
+}
+.text-lg{
+    font-size: var(--size-lg);
+    line-height: 1.65em;
+}
+.text-sm{
+    font-size: var(--size-sm);
+    line-height: 1.45em;
+}
+
+/*  ================    Header css, applies only to header section    ================    */
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    /*  now putting header above the background with 
+    z-index and its width to its parent class which is the website itself    */
+    width: 100%;
+    z-index: 100;
+    transition: 0.3s;
+}
+.nav{
+    /*background-color: red;*/
+    height: calc(var(--header-height) + 0.875rem);
+    display: flex;
+    /*putting the items bottom of navbar*/
+    align-items: flex-start;
+    justify-content: center;
+}
+/*  now putting the links in horizontal order   */
+.nav_menu_list{
+    display: flex;
+    column-gap: 3.25rem;
+}
+.nav_link{
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: var(--bold);
+    font-family: var(--roboto-mono-font);
+    text-transform: uppercase;
+    position: relative;
+    transition: 0.3s;
+}
+.nav_link:hover{
+    transform: rotate(180deg);
+    opacity: 0.5;
+}
+/*adding the white line when you hover over the nav links*/
+.nav_link::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: -0.7rem;
+    width: 10px;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 0.3rem;
+    /*making it invisible*/
+    opacity: 0;
+    transition: 0.3s;
+}
+.nav_link:hover::after{
+    opacity: 1;
+}
+
+.nav_close, 
+.nav_toggle{
+    display: none;
+}
+/*  Active link: */
+.active_link{
+    opacity: 0.5;
+}
+
+/*  ================    Profile css section    ================    */
+.profile{
+    background: url(../Aseti/Slike/mojaSlika.jpg);
+    filter: grayscale(100%);
+    background-size: cover;
+    /*  centering the image */
+    background-position: 50%;
+    padding-top: 5.5rem;
+    margin-bottom: 4rem;
+    /*  backgroud to be to profile:display: ;*/
+    position: relative;
+} 
+
+.profile::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--linear-gradient);
+}
+.profile_container{
+    /*  sorting columns inside grid container, 2 columns
+    4(first takes 4(1/4) parts inside the container)
+    8(second takes 8(3/4) parts inside the container)*/
+    grid-template-columns: 4fr 8fr;
+    column-gap: 1.875rem;
+} 
+.profile_info{
+    /*  positioning elements to other in web page, depth of z index */
+    /*  basically puting profile info above background */
+    z-index: 10;
+}
+.profile_img{
+    width: 80%;
+    height: 380px;
+    object-fit: cover;
+    filter: grayscale(100%);
+    /*  making edges looking smooth */
+    border-radius: 0.3rem;
+    /*  putting the image slightly bellow the profile background    */
+    transform: translateY(3.125rem);
+    box-shadow: 0 0 27px rgba(96, 96, 96, 0.74);    /*  0.34 <=>    34% */
+    /*  x, y, shadow radius, collor, opacity    */
+    transition: 0.3s;
+}
+.profile_img:hover{
+    transform: scale(1.1);
+    transform: translatey(20%);
+    cursor: pointer;
+    transition: 0.3s;
+}
+/* coloring the profile section info */
+.profile_name,
+.profile_intern,
+.profile_list, .profileSocialLink{
+    color: #fff;
+    font-family: var(--roboto-mono-font);
+}
+/* profile name size, line height and positioning it above other info */
+.profile_name{
+    font-size: var(--size-h1);
+    line-height: 1.14em;
+    margin: 0.9em 0 0.23em;
+}
+/*  putting distance between intern and the rest of the text    */
+.profile_intern{
+    margin-bottom: 2.5em;
+}
+/*  designing info category from info about profile */
+.profile_list dt{
+    /*  putting it left from info*/
+    float: left;
+    font-weight: var(--bold);
+    opacity: .4;
+}
+/* now designing the info   */
+.profile_list dd{
+    padding-left: 6.25em;
+}
+/*  selecting all dd exept the last one, dd:not(:last-child)    */
+.profile_list dd:not(:last-child){
+    margin-bottom: 0.94em;
+}
+/*  this is entire social media div*/
+.profile_socialMedia_div{
+    /*  setting the margin of icon div: up, right and left, down */
+    margin: 1.25rem 0rem 2.2rem;
+}
+.profileSocialLink{
+    font-size: 1.7rem;
+    line-height: 1.36rem;
+    margin-right: 0.25rem;
+    opacity: 0.4;
+    transition: 0.3s;
+}
+.profileSocialLink:hover{
+    opacity: 1;
+}
+
+/*  ================    Hello css section page    ================    */
+.hello_details{
+    margin-bottom: 1.65em;
+    /*  now we will align the text to be evenly aligned from both sides(right and left)*/
+    text-align: justify;
+}
+/*EXPERIMENT*/
+.hover_section_title{
+    /*display inline ensures that the element will take the only length  of te text and not more*/
+    display: inline;
+    box-shadow:inset 0 0 0 0 #575757;
+    position: relative;
+    transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    padding: 0 0.125em;
+}
+.hello_div{
+    margin-bottom: 1.125em;
+}
+.hover_section_title:hover{
+    box-shadow: inset 100px 0 0 0 #575757;
+    color: white;
+    cursor: pointer;
+}
+
+/*  ================    Buttons / dugmici css section    ================    */
+.button:hover{
+    /*not opacity*/
+    background-color: var(--primary-color-alt);
+}
+.button_flex{
+    display: flex;
+    align-items:center;
+    column-gap: 0.3rem;
+    margin-top: 1.75rem;
+}
+.btn_center{
+    display: flex;
+    justify-content:flex-start;
+}
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45%;
+    padding: 0.75em 0;
+    margin: 0;
+    margin-top: 1.125rem;
+    border-radius: 1.56em;
+    font-weight: var(--semibold);
+    background-color: var(--primary-color);
+    color: #fff;
+    transition: 0.3s;
+}
+.download_text{
+    padding-left: 0.125em;
+    margin-bottom: 0.125rem;
+}
+/*  ================    Services css section    ================    */
+.services_title{
+    margin-bottom: 0.8em;
+}
+.services_container{
+    /*3 columns, each will take equal width 1fr(1 of each free space),
+    repeat is a function that repeats for as mant items as found  */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.875rem;
+    /* if we didnt make .grid{display:grid;} than it wouldnt work*/
+}
+.services_item{
+    border: 1px solid var(--border-color);
+    padding: 2.5rem 1.25rem 1.875rem;
+    text-align: justify;
+}
+/*this is both image and the dot that image is in*/
+.icon_box{
+    border: 1px solid var(--border-color);
+    width: 82px;
+    height: 82px;
+    border-radius: 50%;
+    /*  centering the image and dot in center*/
+    margin: 0 auto;
+    margin-bottom: 1.25rem;
+    position: relative;
+    /* displaying the entire box as flex so that i 
+    can center the icon in the middle of the dot*/
+    display: flex;
+}
+/*  this is the image design    */
+.services_icon{
+    width: 32px;
+    /*centering the icon in the middle with margin: auto;*/
+    margin: auto;
+}
+.services_dot{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    animation: service_dot 2s linear infinite;
+    animation-play-state: paused;
+    transition: 0.3s;
+}
+.dot{
+    width: 13px;
+    height: 13px;
+    background-color: var(--title-color);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0.9rem;
+}
+.services_dot:hover{
+    animation-play-state: running;
+    background-color: #57575724;
+    border-radius: 50%;
+    cursor: pointer;
+}
+@keyframes service_dot{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(1turn);
+    }
+}
+/* putting relative in .icon_box position provides that any child can 
+be absolute position that means that any child with absolute will be positioned in 
+relative to its nearest ancestor with non static position(.icon_box)
+in context, when parent is relative and you put a child thats absolute, 
+it will position itself to the parents coordinates*/
+/*  ================    Resume css section    ================    */
+.resume_container{
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3.75rem;
+}
+.resume_title,
+.skills_title{
+    color: var(--text-alt-color);
+    letter-spacing: 0.4em;
+    margin-bottom: 2.8em;
+}
+.resume_item{
+    border-left: 2px solid var(--primary-color);
+    padding-left: 1.6rem;
+    /*we have to declare it relative because then the .resume_item::before
+    if we dont then the dots will be left*/
+    position: relative;
+}
+/*again the last item in the list wont have bottom padding
+because if it does than the line will strecth in emppy white space and it
+will look ugly*/
+.resume_item:not(:last-child){
+    padding-bottom: 3rem;
+}
+/*adding the dots on the line*/
+.resume_item::before{
+    content: '';
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid var(--primary-color);
+    position: absolute;
+    left: -0.56rem;
+    background-color: var(--bg-color);
+}
+.resume_subtitle{
+    color: var(--primary-color);
+    margin-bottom: 0.36em;
+}
+.resume_date{
+    color: var(--text-alt-color);
+    margin-bottom: 0.7em;
+}
+.resume_description{
+    /*  centering the text both right and left*/
+    text-align: justify;
+    color: var(--text-color);
+}
+
+/*  ================    Skills css section    ================    */
+.skills_container{
+    /*displaying it in columns, software dev and frontend*/
+    grid-template-columns: repeat(2, 445px);
+    column-gap: 7rem;
+    margin-bottom: 20px;
+}
+.skills_list{
+    /*creating vertical gap between the skills*/
+    row-gap: 1.8rem;  
+}
+.skills_titles{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.625rem;
+}
+/*creating the bar*/
+.skill_bar, 
+.skills_percentage{
+    height: 5px;
+    border-radius: 0.25rem;
+}
+/*creating the bar color to be visible*/
+.skill_bar{
+    background-color: var(--bg-color-alt);
+}
+/*adding the percentage to the bar*/
+.skills_percentage{
+    display: block;
+    background-color: var(--primary-color);
+}
+.hr{
+    height: 3px;
+    border-radius: 5px;
+    border: 0px;
+    background-color: var(--primary-color);
+    margin-bottom: 3rem;
+    margin-top: 1.125rem;
+}
+/*  ================    Projects css section    ================    */
+/*displaying buttons as flex so that they look good*/
+.project_categories{
+    display: flex;
+    column-gap: 3rem;
+    margin-bottom: 1.875rem;
+}
+/*now selecting all category_btn each of them*/
+.category_btn{
+    color: var(--text-alt-color);
+    font-weight: var(--bold);
+    font-family: var(--roboto-mono-font);
+    /*again so that other divs can be absolute*/
+    position: relative;
+    /*this is the hover color experiment*/
+    /*
+    display: inline;
+    box-shadow:inset 0 0 0 transparent;
+    transition:0.3s;
+    padding: 0 0.125em;
+    */
+}
+.category_btn:hover{
+    color: var(--primary-color);
+    /*this is the hover color experiment*/
+    /*
+    box-shadow: inset 0 0 0 100vw #575757;
+    color: white;
+    cursor: pointer;
+    */
+}
+/*building the line on button*/
+.category_btn::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: -0.5rem;
+    width: 7px;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: 0.3s;
+    opacity: 0;
+}
+/*putting it on hover*/
+.category_btn:hover::after{
+    opacity: 1;
+}
+/*designing the selected button:*/
+.active-work{
+    color: var(--primary-color);
+}
+/*when selected making it visible*/
+.active-work::after{
+    opacity: 1;
+}
+/* this is now for the info about the project css*/
+.projects_container{
+    row-gap: 2.5rem;
+}
+.project_item{
+    /*this is to style the columns*/
+    grid-template-columns: 5fr 7fr;
+}
+.project_img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+/*styiling the text*/
+.project_data{
+    padding: 3rem 3rem 2.5rem 1.875rem;
+    border: 1px solud var(--border-color);
+}
+.project_title{
+    margin-bottom: 0.8em;
+    text-align: justify;
+}
+.project_description{
+    margin-bottom: 2.5em;
+    text-align: justify;
+}
+.project.stack{
+    margin-bottom: 1.25em;
+}
+.tags li{
+    /*this styles the used tech in project
+    as inline and now in separate rows*/
+    display: inline-block;
+    margin-top: 0.6rem;
+    margin-left: 0.6rem;
+    box-shadow: 0 1px 14px rgb(0 0 0 / 14%);
+    /*x, y, shadow spread (color / shadow blurr)*/
+    border-radius: 0.2rem;
+}
+.project_link{
+    float: right;
+    margin-top: 3.9rem;
+    color: var(--primary-color);
+    font-family: var(--roboto-mono-font);
+}
+/*  ================    Blog css section    ================    */
+/*designening the entire container for blogs
+putting them in 3 columns*/
+.post_container{
+    grid-template-columns: repeat(3, 1fr);
+    /*fr means widths to each fraction of space(3)*/
+    column-gap: 1.875rem;
+    margin-bottom: 2.5rem;
+}
+.post_img{
+    vertical-align: middle;
+    border-radius: 5px;
+}
+.post_content{
+    border: 1px solid var(--border-color);
+    /*centering the content*/
+    padding: 1.25rem 1.875rem 2.5rem 1.25rem;
+}
+.post_date{
+    text-transform: uppercase;
+    color: var(--text-alt-color);
+    margin-bottom: 0.8em;
+}
+.post_title{
+    margin-bottom: 1.1em;
+    color: var(--title-color);
+}
+.post_description{
+    color: var(--text-alt-color);
+    text-align: justify;
+}
+/*  ================    Contact css section    ================    */
+.contact{
+    background: url(../Aseti/Slike/bg.jpg);
+    background-size: cover;
+    background-position: 50%;
+    position: relative;
+}
+.contact::before{
+    content: '';
+    background: var(--linear-gradient);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+/*this made the background dark*/
+/*now were making the content to be
+above other elements:*/
+.contact_content{
+    z-index: 10;
+    position: relative;
+}
+.contact_container{
+    grid-template-columns: 4fr 5fr 3fr;
+    column-gap: 1.875rem;
+    padding-top: 1.25rem;
+}
+.contact .section_title,
+.contact_list,
+.contact_social_link,
+::placeholder,
+.contact_input,
+.contact_form-title,
+.contact_copy{
+    color: #fff;
+    font-family: var(--roboto-mono-font);
+}
+.contact_list{
+    margin-bottom: 3.25rem;
+    /*space between links and socials*/
+}
+/*design of titles*/
+.contact_list dt{
+    float: left;
+    font-weight: var(--bold);
+    text-transform: uppercase;
+}
+/*design of descriptions*/
+.contact_list dd{
+    padding-left: 6.25rem;
+    margin-bottom: 0.94em;
+}
+.contact_social li{
+    margin-bottom: 1.75rem;
+}
+.contact_social_link{
+    font-family: var(--roboto-font);
+}
+.contact_form{
+    position: relative;
+}
+.contact_form-title{
+    margin-bottom: 1.25em;
+}
+.contact_input-div{
+    margin-bottom: 0.94em;
+}
+/*designing the input*/
+.contact_input{
+    width: 100%;
+    border: 1px solid var(--border-color);
+    border-radius: 3px;
+    padding: 0.625rem;
+}
+.textarea{
+    height: 7.2rem;
+    resize: none;
+    /*cannot resize the textarea*/
+}
+/*making the box shiny when clicked on*/
+.contact_input:focus{
+    box-shadow: inset 0 0 5px 0 #fff;
+    transition: 0.15s;
+}
+.contact_message{
+    position: absolute;
+    bottom: 34%;
+    left: 0;
+    font-family: var(--roboto-mono-font);
+    color: #fff;
+}
+.contact_button{
+    margin-top: 1.875rem;
+    width: 100%;
+    box-shadow: 0 1px 29px rgb(0 0 0 / 40%);
+    /*button black background shadow*/
+}
+.footer_copy{
+    opacity: 0.4;
+    margin-top: 3.75rem;
+    text-align: center;
+}
+/*  ================    Contact javascript css section    ================    */
+.color-light{
+    opacity: 0;
+}
+.color-dark{
+    opacity: 0.4;
+}
+
+/*  ================    Blog page css section    ================    */
+.blog_header{
+    height: 400px;
+    background: url(../Aseti/Slike/bg.jpg);
+    background-size: cover;
+    background-position: 50%;
+    position: relative;
+}
+.blog_header::before{
+    content: '';
+    background: var(--linear-gradient);
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+.blog_details{
+    background-color: #fff;
+    padding: 3rem 4.25rem 3.75rem;
+    margin-top: -16rem;
+    box-shadow: 0 1px 21px rgba(0, 0, 0, 0.527);
+    z-index: 10;
+    position: relative;
+    margin-bottom: 6.25rem;
+}
+.back_to_home{
+    display: inline-flex;
+    column-gap: 0.6rem;
+    text-transform: uppercase;
+    color: var(--text-color);
+}
+.post_details_title{
+    text-transform: uppercase;
+    margin-top: 1.675em;
+    margin-bottom: 0.84em;
+}
+.post_details_date{
+    color: var(--text-alt-color);
+    margin-bottom: 1.12em;
+}
+.post_details_text{
+    margin-bottom: 1.12em;
+    text-align: justify;
+}
+figure{
+    padding-top: 0.625rem;
+    padding-bottom: 2.2rem;
+}
+figcaption{
+    color: var(--text-alt-color);
+    font-style: italic;
+    font-family: var(--roboto-mono-font);
+    margin-top: 1.4em;
+}
+.post_social_share{
+    display: inline-flex;
+    column-gap: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+.post_share{
+    margin-top: -2px;
+    color: var(--text-color);
+}
+.post_share_link{
+    color: var(--title-color);
+    font-size: 1.75rem;
+    opacity: 0.4;
+    margin-right: 0.14em;
+    transition: 0.3s;
+}
+.post_share_link:hover{
+    color: var(--primary-color);
+    opacity: 1;
+    transition: 0.3s;
+}
+
+/*  ================    Making it responsive    ================    */
+/*scroll header responsive*/
+.scroll-header{
+    position: fixed;
+    background-color: var(--bg-color);
+    box-shadow: 0 1px 21px rgba(0, 0, 0, 0.527);
+}
+.scroll-header .nav_link{
+    color: var(--text-color);
+}
+.scroll-header .nav{
+    justify-content: center;
+}
+.scroll-header .nav_link::after{
+    background-color: var(--text-color);
+}
+.scroll-header .nav_link::after,
+.scroll-header .active_link{
+    color: var(--primary-color);
+    transition: 0.3s;
+}
+/*  ================    BreakPoints    ================    */
+/*  ================    LG    ================    */
+@media screen and (max-width:1200px){
+    :root{
+        --size-h1: 2.75rem;
+        --size-h2: 1.75rem;
+        --size-lg: 1rem;
+        --size-base: 0.938rem;
+        --size-sm: 0.813rem;
+        --size-xs: 0.687rem;
+    }
+    .container{
+        max-width: 960px;
+    }
+    .home_container{
+        grid-template-columns: 5fr 7fr;
+    }
+    .skills_container,
+    .services_container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (max-width:992px){
+    .container{
+        max-width: 720px;
+    }
+    .nav_menu{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(0 0 0 / 0.8);
+        z-index: 100;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(-100%);
+        transition: 0.3s;
+    }
+    /*this show_menu is created in main.js
+    to show if in responsive toggle shows*/
+    .show_menu{
+        transform:translateX(0);
+    }
+    .nav_menu_list{
+        flex-direction: column;
+        row-gap: 2.125rem;
+        text-align: center;
+    }
+    .nav_toggle,
+    .nav_close{
+        display: block;
+    }
+    .nav_close{
+        font-size: 1.5rem;
+        position: absolute;
+        top: 2.7rem;
+        left: 8%;
+        cursor: pointer;
+        color: #fff;
+    }
+    .nav_toggle{
+        color: #fff;
+        font-size: 1.25rem;
+        opacity: 1;
+    }
+    .scroll-header .nav_toggle{
+        color: var(--text-color);
+        opacity: 1;
+    }
+    .scroll-header .nav_link{
+        color: #fff;
+    }
+    .profile{
+        padding-top: 5.25rem;
+    }
+    .project_item,
+    .resume_container,
+    .profile_container{
+        grid-template-columns: 1fr;
+    }
+    .resume_container{
+        row-gap: 3.75rem;
+    }
+    .skills_content{
+        padding-bottom: 5.125rem;
+    }
+    .skills_content:last-child{
+        padding-bottom: 0rem;
+    }
+    .profile_img{
+        display: none;
+    }
+    .section {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    .skills_content{
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 1.875rem;
+    }
+    .post_container{
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 1.875rem;
+    }
+    .contact_container{
+        grid-template-columns: 5fr 7fr;
+    }
+}
+/*medium devices*/
+@media screen and (max-width:768px){
+    .container{
+        max-width: 540px;
+    }
+    .post_container,
+    .services_container,
+    .skills_container{
+        grid-template-columns: 1fr;
+    }
+    .skills_container{
+        row-gap: 3.75rem;
+    }
+    .project_data{
+        padding: 2rem 1.25rem 1.5rem 1.25rem;
+    }
+    .contact_content{
+        text-align: justify;
+        column-gap: 1.5rem;
+        display: block;
+        margin-top: 1.5rem;
+    }
+    .contact_container{
+        display: block;
+        margin-bottom: 1rem;
+        row-gap: 2rem;
+    }
+    .blog_details{
+        padding: 2.5rem 1.875rem;
+    }
+    .hr{
+        width: 90%;
+    }
+}
+@media screen and (max-width:576px){
+    .profile{
+        padding-top: 4.4rem;
+    }
+    .project_categories{
+        text-align: center;
+        column-gap: 1.5rem;
+        display: block;
+        margin-top: 1.5rem;
+    }
+    .category_btn{
+        display: block;
+        margin-bottom: 1rem;
+    }
+    .tags li{
+        margin-bottom: 0.9rem;
+    }
+    .button{
+       width: 80%;
+    }
+    .btn_center{
+        display: flex;
+        justify-content:center;
+        align-items: center;
+    }
+}
+/*small devices*/
+@media screen and (max-width:350px){
+    :root{
+        --size-h1: 2rem;
+    }
+    .container{
+        max-width: 330px;
+    }
+    .profile_intern{
+        font-size: var(--size-sm);
+    }
+    .profile_list{
+        font-size: 0.875rem;
+    }
+    .profile_list dd{
+        padding-left: 5.75rem;
+    }
+    .profileSocialLink{
+        font-size: 1.3rem;
+    }
+}
